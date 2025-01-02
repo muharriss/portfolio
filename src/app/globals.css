@@ -28,3 +28,25 @@ body {
   color: #fff;
   text-shadow: 0px 0px 20px #00aad4;
 } */
+
+
+.style-2::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #979797;
+}
+
+.style-2::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #4e4e4e;
+}
+
+.style-2::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #7c7c7c;
+}
+

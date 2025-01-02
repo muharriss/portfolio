@@ -1,7 +1,7 @@
-const Gap125 = () => {
+const Gap = () => {
     return (
         <div className="pt-[115vh]"/>
     )
 }
 
-export default Gap125
+export default Gap
