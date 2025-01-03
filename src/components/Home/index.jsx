@@ -55,7 +55,6 @@ const Home = () => {
                 </div>
             </div>
             <div className={`fixed h-screen w-full -z-10 ${!initialized ? "backdrop-blur-md bg-black bg-opacity-[82%] " : ""}  ${isBlurred ? "backdrop-blur-md bg-black bg-opacity-[82%]  " : ""}  transition-all duration-300`} />
-            <p className="text-3xl">Testing bro</p>
         </div>
     )
 }
