@@ -5,10 +5,10 @@ import Link from 'next/link';
 const Navbar = ({ isBlurred, toggle, setToggle }) => {
     return (
         <nav className={`fixed top-0 w-full flex justify-between items-center  px-6 xl:px-32 py-6 ${isBlurred ? "bg-black bg-opacity-[50%] backdrop-blur-sm" : ""} transition-all duration-300 z-20`}>
-            <ul className={`flex  items-center sm:space-x-8  `}>
+            <ul className={`flex justify-center items-center sm:space-x-8 `}>
                 <li>
                     <Link href="#" scroll={true} >
-                        <span className="cursor-pointer hover:text-blue-500 transition-all duration-300 ease-in-out text-2xl font-bold sm:pr-7">muHarris</span>
+                        <span className="cursor-pointer hover:text-blue-500 transition-all duration-300 ease-in-out text-2xl font-bold sm:pr-7">hariskuy</span>
                     </Link>
                 </li>
                 <li>
