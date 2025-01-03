@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Navbar from "../Navbar";
 import SideBar from "../Navbar/SideBar";
-import Loader from "./loader";
+import Loader from "./Loader";
 
 const Home = () => {
 
