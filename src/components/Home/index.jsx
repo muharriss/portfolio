@@ -54,15 +54,9 @@ const Home = () => {
     }, []);
 
 
-    if (isLoading) {
-        return (
-            <Loader />
-        );
-    }
-
-
     return (
         <div className="h-screen flex justify-center items-center">
+            {isLoading ? <Loader/> : null}
             <Navbar isBlurred={isBlurred} toggle={toggle} setToggle={setToggle} />
             <SideBar toggle={toggle} setToggle={setToggle} />
             <div className={`fixed h-screen w-full -z-10 bg-[url('/bg.webp')] bg-cover bg-center`} >
