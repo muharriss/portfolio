@@ -11,7 +11,7 @@ const About = () => {
                 <p className="text-5xl sm:text-6xl md:text-7xl xl:text-8xl uppercase font-black mb-14">About me</p>
                 <div className="flex flex-col gap-6 md:flex-row  justify-center items-center ">
                     <div className=" w-[100%] flex justify-center md:min-w-[300px] ">
-                        <img src={"profile.jpg"} alt="profile" className=" aspect-square object-cover w-[300px] contrast-150 grayscale hover:sepia rounded-3xl transition-all ease-in-out duration-300" />
+                        <img src={"profile.webp"} alt="profile.png" className=" aspect-square object-cover w-[300px] contrast-150 grayscale hover:sepia rounded-3xl transition-all ease-in-out duration-300" />
                     </div>
                     <div className=" space-y-2 mt-14 md:mt-0 md:max-w-[550px] ">
                         <p className="text-4xl leading-normal">Hi, I'm Haris. <br className="md:hidden" />A Frontend Developer. </p>

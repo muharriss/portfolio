@@ -48,7 +48,7 @@ const Home = () => {
         <div >
             <Navbar isBlurred={isBlurred} toggle={toggle} setToggle={setToggle} />
             <SideBar toggle={toggle} setToggle={setToggle} />
-            <div className={`fixed h-screen w-full -z-10 bg-[url('/bg.jpg')] bg-cover bg-center`} >
+            <div className={`fixed h-screen w-full -z-10 bg-[url('/bg.webp')] bg-cover bg-center`} >
                 <div className={`h-full flex justify-center items-center  `}>
                     <p className="text-7xl sm:text-8xl md:text-[8rem] xl:text-[10rem]">muharis</p>
                 </div>

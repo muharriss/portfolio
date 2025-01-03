@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const Navbar = ({ isBlurred, toggle, setToggle }) => {
     return (
-        <nav className={`fixed top-0 w-full flex justify-between items-center  px-6 xl:px-32 py-6 ${isBlurred ? "bg-black bg-opacity-[50%] backdrop-blur-sm" : ""} transition-all duration-300 z-10`}>
+        <nav className={`fixed top-0 w-full flex justify-between items-center  px-6 xl:px-32 py-6 ${isBlurred ? "bg-black bg-opacity-[50%] backdrop-blur-sm" : ""} transition-all duration-300 z-20`}>
             <ul className={`flex  items-center sm:space-x-8  `}>
                 <li>
                     <Link href="#" scroll={true} >
@@ -28,7 +28,9 @@ const Navbar = ({ isBlurred, toggle, setToggle }) => {
                 </li>
             </ul>
             <LuMenu className="size-8 sm:hidden cursor-pointer hover:scale-105 transition-all duration-300" onClick={() => setToggle(!toggle)} />
-            <FaGithub className="size-7 cursor-pointer hover:-translate-y-1 transition-all duration-300 hidden sm:block " />
+            <Link href={"https://github.com/muharriss"} className="hidden sm:block">
+                <FaGithub className="size-7 cursor-pointer hover:-translate-y-1 transition-all duration-300  " />
+            </Link>
         </nav>
     );
 };
