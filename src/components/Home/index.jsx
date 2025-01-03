@@ -10,7 +10,7 @@ const Home = () => {
     const [isBlurred, setIsBlurred] = useState(false);
     const [initialized, setInitialized] = useState(false);
     const [toggle, setToggle] = useState(false)
-    const [isLoading, setIsloading] = useState(true)
+    const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
 
@@ -45,40 +45,33 @@ const Home = () => {
         };
     }, [toggle]);
 
-    
 
-    
     useEffect(() => {
-
-        const handleLoader = () => {
-            setIsloading(false)
-        };
-
-        handleLoader()
-
-        window.addEventListener("load", handleLoader);
-
-        return () => window.removeEventListener("load", handleLoader);
+        const timer = setTimeout(() => {
+            setIsLoading(false);
+        }, 2000); // Durasi loading 2 detik
+        return () => clearTimeout(timer); // Bersihkan timer jika komponen unmount
     }, []);
 
 
+    if (isLoading) {
+        return (
+            <Loader />
+        );
+    }
+
+
     return (
-        <div>
-            {isLoading ? (
-                <Loader/>
-            ) : (
-                <div className="h-screen flex justify-center items-center">
-                    <Navbar isBlurred={isBlurred} toggle={toggle} setToggle={setToggle} />
-                    <SideBar toggle={toggle} setToggle={setToggle} />
-                    <div className={`fixed h-screen w-full -z-10 bg-[url('/bg.webp')] bg-cover bg-center`} >
-                        <div className={`h-full flex flex-col justify-center items-center  `}>
-                            <p className="text-7xl sm:text-8xl md:text-[8rem] xl:text-[10rem] text-nowrap text-center">harris</p>
-                            <p className="text-3xl text-center text-nowrap">Frontend Developer</p>
-                        </div>
-                    </div>
-                    <div className={`fixed h-screen w-full -z-10 ${!initialized ? "backdrop-blur-md bg-black bg-opacity-[82%] " : ""}  ${isBlurred ? "backdrop-blur-md bg-black bg-opacity-[82%]  " : ""}  transition-all duration-300`} />
+        <div className="h-screen flex justify-center items-center">
+            <Navbar isBlurred={isBlurred} toggle={toggle} setToggle={setToggle} />
+            <SideBar toggle={toggle} setToggle={setToggle} />
+            <div className={`fixed h-screen w-full -z-10 bg-[url('/bg.webp')] bg-cover bg-center`} >
+                <div className={`h-full flex flex-col justify-center items-center  `}>
+                    <p className="text-7xl sm:text-8xl md:text-[8rem] xl:text-[10rem] text-nowrap text-center">harris</p>
+                    <p className="text-3xl text-center text-nowrap">Frontend Developer</p>
                 </div>
-            )}
+            </div>
+            <div className={`fixed h-screen w-full -z-10 ${!initialized ? "backdrop-blur-md bg-black bg-opacity-[82%] " : ""}  ${isBlurred ? "backdrop-blur-md bg-black bg-opacity-[82%]  " : ""}  transition-all duration-300`} />
         </div>
     )
 }
