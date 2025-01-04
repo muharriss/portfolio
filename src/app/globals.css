@@ -24,6 +24,13 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+@supports (padding: env(safe-area-inset-top)) {
+  .safe-area {
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
 /* .neonText {
   color: #fff;
   text-shadow: 0px 0px 20px #00aad4;
