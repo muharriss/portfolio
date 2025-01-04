@@ -57,8 +57,8 @@ const Home = () => {
 
 
     return (
-        <div className="h-[100vh] pb-[env(safe-area-inset-bottom)] pt-[env(safe-area-inset-top)] flex justify-center items-center">
-            <p>testing cuy</p>
+        <div className="h-[100vh]  flex justify-center items-center ">
+            <p className="w-full absolute top-1/2  transform -translate-y-1/2 ">testinglah cuy</p>
             {/* {isLoading ? <Loader/> : null} */}
             {/* <Navbar isBlurred={isBlurred} toggle={toggle} setToggle={setToggle} />
             <SideBar toggle={toggle} setToggle={setToggle} />
