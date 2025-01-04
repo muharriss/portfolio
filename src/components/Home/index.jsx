@@ -47,7 +47,7 @@ const Home = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
             setIsDelay(false);
-        }, 5000);
+        }, 10000);
         return () => clearTimeout(timer); // Bersihkan timer jika komponen unmount
     }, []);
 
