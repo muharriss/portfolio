@@ -3,14 +3,12 @@
 import { useEffect, useState } from "react";
 import Navbar from "../Navbar";
 import SideBar from "../Navbar/SideBar";
-// import Loader from "./Loader";
 
 const Home = () => {
 
     const [isBlurred, setIsBlurred] = useState(false);
     const [initialized, setInitialized] = useState(false);
     const [toggle, setToggle] = useState(false)
-    // const [isLoading, setIsLoading] = useState(true)
     const [isDelay, setIsDelay] = useState(true)
 
     useEffect(() => {
@@ -50,18 +48,16 @@ const Home = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
             setIsDelay(false);
-        }, 2000); 
+        }, 5000); 
         return () => clearTimeout(timer); // Bersihkan timer jika komponen unmount
     }, []);
 
 
-
     return (
         <div >
-            {/* {isLoading ? <Loader/> : null} */}
             <Navbar isBlurred={isBlurred} toggle={toggle} setToggle={setToggle} />
             <SideBar toggle={toggle} setToggle={setToggle} />
-            <div className={`fixed ${isDelay ? "h-[650px]" : "h-screen"} sm:h-screen w-full -z-10 bg-[url('/bg.webp')] bg-cover bg-center`} >
+            <div className={`fixed ${isDelay ? "h-[800px]" : "h-screen"} sm:h-screen w-full -z-10 bg-[url('/bg.webp')] bg-cover bg-center`} >
                 <div className={`h-full flex flex-col justify-center items-center  `}>
                     <p className="text-7xl sm:text-8xl md:text-[8rem] xl:text-[10rem] text-nowrap text-center">harris</p>
                     <p className="text-3xl text-center text-nowrap">Frontend Developer</p>
