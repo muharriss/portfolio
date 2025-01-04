@@ -9,7 +9,6 @@ const Home = () => {
     const [isBlurred, setIsBlurred] = useState(false);
     const [initialized, setInitialized] = useState(false);
     const [toggle, setToggle] = useState(false)
-    const [isDelay, setIsDelay] = useState(true)
     const [hScreen, setHscreen] = useState(false)//to fix broken layout for mobile screen
 
     useEffect(() => {
@@ -50,12 +49,6 @@ const Home = () => {
         };
     }, [toggle]);
 
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setIsDelay(false);
-        }, 10000);
-        return () => clearTimeout(timer); // Bersihkan timer jika komponen unmount
-    }, []);
 
     return (
         <div >

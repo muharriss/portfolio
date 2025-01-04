@@ -37,7 +37,6 @@ const About = () => {
                             <RiTailwindCssFill className="aspect-square max-w-[52px] w-full h-[52px]" />
                             <p className=" bottom-2 left-7 font-bold text-xs sm:text-base">Tailwind</p>
                         </div>
-
                         <div className=" flex flex-col gap-2 justify-center items-center aspect-square max-w-[112px] w-full h-full  rounded-xl m-0 p-0 hover:bg-white hover:text-black transition-all duration-300 ease-in-out">
                             <SiPrisma className="aspect-square max-w-[52px] w-full h-[52px]" />
                             <p className=" bottom-2 left-7 font-bold text-xs sm:text-base">Prisma</p>
@@ -53,11 +52,6 @@ const About = () => {
                             <SiMongodb className="aspect-square max-w-[52px] w-full h-[52px]" />
                             <p className=" bottom-2 left-7 font-bold text-xs sm:text-base">MongoDB</p>
                         </div>
-
-
-
-                       
-                        
                     </div>
                 </div>
             </div>
