@@ -55,22 +55,21 @@ const Home = () => {
 
 
     useEffect(() => {
-        // Memicu resize event untuk memperbarui layout
-        const triggerResize = () => {
-          window.dispatchEvent(new Event('resize'));
+        const fixLayout = () => {
+            window.scrollTo(0, 1); // Scroll sedikit ke bawah
+            window.scrollTo(0, 0); // Kembali ke atas
         };
-      
-        triggerResize();
-      
-        // Tambahkan fallback dengan timer untuk memastikan layout stabil
-        const timeout = setTimeout(triggerResize, 100);
-      
+
+        fixLayout();
+
+        const timeout = setTimeout(fixLayout, 100);
+
         return () => clearTimeout(timeout);
-      }, []);
+    }, []);
 
     return (
         <div className="h-[100vh] flex justify-center items-center ">
-            <p className="">testing2 cuy</p>
+            <p className="">testing4 cuy</p>
             {/* {isLoading ? <Loader/> : null} */}
             {/* <Navbar isBlurred={isBlurred} toggle={toggle} setToggle={setToggle} />
             <SideBar toggle={toggle} setToggle={setToggle} />
