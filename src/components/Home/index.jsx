@@ -57,8 +57,8 @@ const Home = () => {
 
 
     return (
-        <div className="h-svh flex justify-center items-center">
-            <p>testingsvh cuy</p>
+        <div className="h-lvh flex justify-center items-center">
+            <p>testingLvh cuy</p>
             {/* {isLoading ? <Loader/> : null} */}
             {/* <Navbar isBlurred={isBlurred} toggle={toggle} setToggle={setToggle} />
             <SideBar toggle={toggle} setToggle={setToggle} />
