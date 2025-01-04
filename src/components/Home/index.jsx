@@ -3,14 +3,14 @@
 import { useEffect, useState } from "react";
 import Navbar from "../Navbar";
 import SideBar from "../Navbar/SideBar";
-import Loader from "./Loader";
+// import Loader from "./Loader";
 
 const Home = () => {
 
     const [isBlurred, setIsBlurred] = useState(false);
     const [initialized, setInitialized] = useState(false);
     const [toggle, setToggle] = useState(false)
-    const [isLoading, setIsLoading] = useState(true)
+    // const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
 
@@ -46,18 +46,31 @@ const Home = () => {
     }, [toggle]);
 
 
+    // useEffect(() => {
+    //     const timer = setTimeout(() => {
+    //         setIsLoading(false);
+    //     }, 2000); // Durasi loading 2 detik
+    //     return () => clearTimeout(timer); // Bersihkan timer jika komponen unmount
+    // }, []);
+
+
     useEffect(() => {
-        const timer = setTimeout(() => {
-            setIsLoading(false);
-        }, 2000); // Durasi loading 2 detik
-        return () => clearTimeout(timer); // Bersihkan timer jika komponen unmount
-    }, []);
+        const setVH = () => {
+          const vh = window.innerHeight * 0.01;
+          document.documentElement.style.setProperty('--vh', `${vh}px`);
+        };
+      
+        setVH();
+      
+        window.addEventListener('resize', setVH);
+      
+        return () => window.removeEventListener('resize', setVH);
+      }, []);
 
 
     return (
-        <div className="h-screen flex justify-center items-center">
-            <p>testing bro</p>
-            {/* {isLoading ? <Loader/> : null}
+        <div className="h-[calc(var(--vh)*100)] sm:h-screen flex justify-center items-center">
+            {/* {isLoading ? <Loader/> : null} */}
             <Navbar isBlurred={isBlurred} toggle={toggle} setToggle={setToggle} />
             <SideBar toggle={toggle} setToggle={setToggle} />
             <div className={`fixed h-screen w-full -z-10 bg-[url('/bg.webp')] bg-cover bg-center`} >
@@ -66,7 +79,7 @@ const Home = () => {
                     <p className="text-3xl text-center text-nowrap">Frontend Developer</p>
                 </div>
             </div>
-            <div className={`fixed h-screen w-full -z-10 ${!initialized ? "backdrop-blur-md bg-black bg-opacity-[82%] " : ""}  ${isBlurred ? "backdrop-blur-md bg-black bg-opacity-[82%]  " : ""}  transition-all duration-300`} /> */}
+            <div className={`fixed h-screen w-full -z-10 ${!initialized ? "backdrop-blur-md bg-black bg-opacity-[82%] " : ""}  ${isBlurred ? "backdrop-blur-md bg-black bg-opacity-[82%]  " : ""}  transition-all duration-300`} />
         </div>
     )
 }
