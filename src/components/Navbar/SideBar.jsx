@@ -16,7 +16,7 @@ const SideBar = ({ toggle, setToggle }) => {
                     <Link href="#projects" onClick={() => setToggle(!toggle)} className="hover:text-[#1e88e5] transition-all duration-300 ease-in-out">Projects</Link>
                     <Link href="#contact" onClick={() => setToggle(!toggle)} className="hover:text-[#1e88e5] transition-all duration-300 ease-in-out">Contact</Link>
                 </div>
-                <div className="gap-3 flex justify-center absolute w-full h-dvh top-0 left-0 items-end pb-10 ">
+                <div className="gap-3 flex justify-center absolute right-0 bottom-10 w-full">
                     <a href="mailto:muhharris04@gamil.com" aria-label="Email" >
                         <MdEmail className="cursor-pointer size-10 p-2 rounded-md hover:bg-white hover:text-black transition-all duration-300 ease-in-out" />
                     </a>
