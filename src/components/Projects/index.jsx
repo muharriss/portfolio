@@ -46,8 +46,8 @@ const Project = () => {
                             " for a Visual Programming coursework project."
                         ]}
                         tech={"NetBeans Java Swing MySQL"}
-                        imgDesktop={"tekken-desktop.png"}
-                        imgOther={"tekken-mobile.png"}
+                        imgDesktop={"tekken-desktop.webp"}
+                        imgOther={"tekken-mobile.webp"}
                         linkGithub={"https://github.com/dammar01/Tekken-Tactics"}
                     // linkWebsite={""} 
                     />
