@@ -11,10 +11,10 @@ const Contact = () => {
                     <div className=" space-y-5">
                         <p className="text-5xl text-left font-bold">Stay In Touch</p>
                         <p className="text-xl text-left">Feel free to contact me if you have any questions or just want to say hi.</p>
-                        <p className="text-xl font-bold text-left">muhharris04@gamil.com</p>
+                        <p className="text-xl font-bold text-left">muhharris04@gmail.com</p>
                     </div>
                     <div className="gap-3 sm:space-y-1 flex sm:flex-col pt-3 sm:pt-0 sm:pl-10">
-                        <a href="mailto:muhharris04@gamil.com" aria-label="Email" >
+                        <a href="mailto:muhharris04@gmail.com" aria-label="Email" >
                             <MdEmail className="cursor-pointer size-10 bg-gray-800 p-2 rounded-md hover:bg-white hover:text-black transition-all duration-300 ease-in-out" />
                         </a>
                         <Link href={"https://github.com/muharriss"}>
