@@ -54,6 +54,7 @@ const Home = () => {
 
     return (
         <div >
+            {!initialized && <Loader />}
             <Navbar isBlurred={isBlurred} toggle={toggle} setToggle={setToggle} />
             <SideBar toggle={toggle} setToggle={setToggle} />
             <motion.div
