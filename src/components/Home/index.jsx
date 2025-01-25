@@ -51,10 +51,17 @@ const Home = () => {
         };
     }, [toggle]);
 
+    if (!initialized) {
+        return (
+            <div>
+                <Navbar isBlurred={isBlurred} toggle={toggle} setToggle={setToggle} />
+                <Loader />
+            </div>
+        )
+    }
 
     return (
         <div >
-            {!initialized && <Loader />}
             <Navbar isBlurred={isBlurred} toggle={toggle} setToggle={setToggle} />
             <SideBar toggle={toggle} setToggle={setToggle} />
             <motion.div
