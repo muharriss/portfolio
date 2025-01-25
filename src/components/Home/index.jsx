@@ -31,7 +31,7 @@ const Home = () => {
 
         handleScroll();
 
-        setInitialized(true);
+        // setInitialized(true);
 
         window.addEventListener("scroll", handleScroll);
 
@@ -51,9 +51,16 @@ const Home = () => {
         };
     }, [toggle]);
 
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setInitialized(true)
+        }, 2000)
+        return () => clearTimeout(timer)
+    }, [])
+
     return (
         <div >
-             {!initialized && <Loader />}
+            {!initialized && <Loader />}
             <Navbar isBlurred={isBlurred} toggle={toggle} setToggle={setToggle} />
             <SideBar toggle={toggle} setToggle={setToggle} />
             <motion.div
