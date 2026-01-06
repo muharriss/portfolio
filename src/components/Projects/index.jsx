@@ -8,6 +8,16 @@ const Project = () => {
                 <p className="text-5xl sm:text-6xl md:text-7xl xl:text-8xl uppercase font-black pb-14">Projects</p>
                 <div className="space-y-8">
                     <ProjectCard
+                        title={"Posbankum"}
+                        desc={"Built the complete frontend for Indonesia's legal aid platform using Nuxt.js, TailwindCSS, and Nuxt UI. Implemented 7 modules including user management, regional data CRUD, and real-time monitoring dashboards with REST API integration."}
+                        tech={"Nuxtjs Tailwindcss NuxtUI"}
+                        imgDesktop={"posbankum-desktop.webp"}
+                        imgOther={"posbankum-mobile.webp"}
+                        isDescBg={true}
+                        // linkGithub={""}
+                        // linkWebsite={""}
+                    />
+                    <ProjectCard
                         title={"AnimeList"}
                         desc={"AnimeList is a website where users can explore anime lists, view details, and manage their collections. It features user authentication and fetches anime data from the Jikan API. Built with Next.js, Tailwind CSS, Prisma, NextAuth, Zod, and PostgreSQL on Vercel."}
                         // desc2={"Built with Next.js, Tailwind CSS, Prisma, NextAuth, Zod, and PostgreSQL on Vercel."}

@@ -69,7 +69,7 @@ const Home = () => {
                 transition={{
                     duration: 2,
                 }}
-                className={`fixed ${hScreen ? "h-screen" : "h-[800px]"} sm:h-screen w-full -z-10 bg-[url('/bg.webp')] bg-cover bg-center`}
+                className={`fixed ${hScreen ? "h-screen" : "h-[800px]"} sm:h-screen w-full -z-10 bg-[url('/bg2.webp')] bg-cover bg-center`}
             >
                 <div className={`h-full flex flex-col justify-center items-center  `}>
                     <p className="text-7xl sm:text-8xl md:text-[8rem] xl:text-[10rem] text-nowrap text-center">harris</p>
