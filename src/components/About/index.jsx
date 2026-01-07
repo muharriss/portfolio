@@ -13,12 +13,21 @@ const About = () => {
                     {/* <div className=" w-[100%] flex justify-center md:min-w-[300px] ">
                         <img src={"profile.webp"} alt="profile.jpg" className=" aspect-square object-cover w-[300px] contrast-125 grayscale hover:sepia rounded-3xl transition-all ease-in-out duration-300" />
                     </div> */}
-                    <div className=" w-[100%] flex justify-center md:min-w-[300px]" >
+
+                    {/* <div className=" w-[100%] flex justify-center md:min-w-[300px]" >
                         <div className="bg-[url(/profile.jpg)]  bg-center bg-cover aspect-square object-cover w-[300px]  hover:bg-[url(/profile2.jpg)] hover:contrast-100 hover:grayscale-0 hover:brightness-125  rounded-3xl transition-all ease-in-out duration-300" />
-                        {/* <img src={"profile2.jpg"} alt="profile.jpg" className="aspect-square object-cover w-[300px]  brightness-150  hover:  rounded-3xl transition-all ease-in-out duration-300" /> */}
+                    </div> */}
+
+                    <div className="w-[100%] flex justify-center md:min-w-[300px]">
+                        <div className="relative aspect-square w-[300px] rounded-3xl overflow-hidden group">
+                            {/* Gambar utama */}
+                            <div className="absolute inset-0 bg-[url(/profile.jpg)] bg-center bg-cover transition-all duration-300 group-hover:opacity-0"  />
+                            {/* Gambar hover */}
+                            <div className="absolute inset-0 bg-[url(/profile2.jpg)] bg-center bg-cover opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:contrast-100 group-hover:brightness-125" />
+                        </div>
                     </div>
                     <div className=" space-y-2 mt-14 md:mt-0 md:max-w-[550px] ">
-                        <p className="text-4xl leading-normal">Hi, I'm Haris. <br className="md:hidden" />A Frontend Developer. </p>
+                        <p className="text-4xl leading-normal">Hi, I&apos;m Haris. <br className="md:hidden" />A Frontend Developer. </p>
                         <p className="text-xl text-justify leading-8">I specialize in building dynamic and interactive web applications. I enjoy creating user-friendly and efficient digital experiences. I love film, music, and anime.</p>
                     </div>
                 </div>
